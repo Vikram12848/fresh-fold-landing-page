@@ -52,14 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				laundry: {
-					blue: 'hsl(var(--laundry-blue))',
-					'blue-light': 'hsl(var(--laundry-blue-light))',
-					'blue-dark': 'hsl(var(--laundry-blue-dark))',
-					green: 'hsl(var(--laundry-green))',
-					'green-light': 'hsl(var(--laundry-green-light))',
-					mint: 'hsl(var(--laundry-mint))',
-					fresh: 'hsl(var(--laundry-fresh))'
+				logo: {
+					blue: 'hsl(var(--logo-blue))',
+					'blue-light': 'hsl(var(--logo-blue-light))',
+					'blue-dark': 'hsl(var(--logo-blue-dark))',
+					'gradient-start': 'hsl(var(--logo-gradient-start))',
+					'gradient-end': 'hsl(var(--logo-gradient-end))',
+					accent: 'hsl(var(--accent-blue))',
+					fresh: 'hsl(var(--fresh-bg))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

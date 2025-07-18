@@ -36,24 +36,24 @@ All colors MUST be HSL.
     --input: 215 27% 90%;
     --ring: 210 90% 58%;
 
-    /* Custom laundry theme colors */
-    --laundry-blue: 210 90% 58%;
-    --laundry-blue-light: 210 85% 70%;
-    --laundry-blue-dark: 210 95% 45%;
-    --laundry-green: 155 70% 50%;
-    --laundry-green-light: 155 50% 85%;
-    --laundry-mint: 170 40% 90%;
-    --laundry-fresh: 180 50% 95%;
+    /* Custom logo-inspired theme colors */
+    --logo-blue: 210 100% 50%;
+    --logo-blue-light: 200 100% 65%;
+    --logo-blue-dark: 215 100% 40%;
+    --logo-gradient-start: 210 100% 50%;
+    --logo-gradient-end: 200 100% 65%;
+    --accent-blue: 205 95% 55%;
+    --fresh-bg: 210 30% 98%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--laundry-blue)), hsl(var(--laundry-blue-light)));
-    --gradient-card: linear-gradient(135deg, hsl(var(--laundry-fresh)), hsl(var(--laundry-mint)));
-    --gradient-accent: linear-gradient(45deg, hsl(var(--laundry-green)), hsl(var(--laundry-blue-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--logo-blue)), hsl(var(--logo-blue-light)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--fresh-bg)), hsl(var(--background)));
+    --gradient-accent: linear-gradient(45deg, hsl(var(--logo-gradient-start)), hsl(var(--logo-gradient-end)));
     
     /* Shadows */
-    --shadow-soft: 0 4px 20px -8px hsl(var(--laundry-blue) / 0.3);
-    --shadow-card: 0 8px 25px -8px hsl(var(--laundry-blue) / 0.15);
-    --shadow-floating: 0 20px 40px -12px hsl(var(--laundry-blue) / 0.25);
+    --shadow-soft: 0 4px 20px -8px hsl(var(--logo-blue) / 0.3);
+    --shadow-card: 0 8px 25px -8px hsl(var(--logo-blue) / 0.15);
+    --shadow-floating: 0 20px 40px -12px hsl(var(--logo-blue) / 0.25);
 
     --radius: 0.5rem;
 

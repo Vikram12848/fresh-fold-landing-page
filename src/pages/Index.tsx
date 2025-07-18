@@ -88,7 +88,10 @@ const Index = () => {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-laundry-blue">The Laundry Bag</div>
+          <div className="flex items-center gap-3">
+            <img src="/lovable-uploads/23bfce5b-23ca-478a-9252-ad0e924eecff.png" alt="LB Logo" className="h-10 w-10" />
+            <div className="text-2xl font-bold text-logo-blue">The Laundry Bag</div>
+          </div>
           <div className="flex gap-4">
             <Button asChild size="sm" className="hidden md:inline-flex">
               <a href={`tel:${phoneNumber}`}>
@@ -112,16 +115,16 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-laundry-blue/20 to-laundry-fresh/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-logo-blue/20 to-logo-fresh/20" />
         
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <Badge variant="secondary" className="mb-6 bg-laundry-green-light text-laundry-green font-semibold">
+          <Badge variant="secondary" className="mb-6 bg-logo-blue-light/20 text-logo-blue font-semibold border border-logo-blue/30">
             Limited-Time Discount for First-Time Customers!
           </Badge>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Fresh, Fast & <br />
-            <span className="bg-gradient-to-r from-laundry-green to-laundry-blue-light bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-logo-blue to-logo-blue-light bg-clip-text text-transparent">
               Hassle-Free
             </span> <br />
             Laundry Services!
@@ -132,13 +135,13 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button asChild size="lg" className="bg-white text-laundry-blue hover:bg-white/90 text-lg px-8 py-6 shadow-floating">
+            <Button asChild size="lg" className="bg-white text-logo-blue hover:bg-white/90 text-lg px-8 py-6 shadow-floating">
               <a href={`tel:${phoneNumber}`}>
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: {phoneNumber}
               </a>
             </Button>
-            <Button asChild size="lg" variant="secondary" className="bg-laundry-green hover:bg-laundry-green/90 text-white text-lg px-8 py-6 shadow-floating">
+            <Button asChild size="lg" variant="secondary" className="bg-logo-accent hover:bg-logo-accent/90 text-white text-lg px-8 py-6 shadow-floating">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Chat on WhatsApp
@@ -149,7 +152,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-laundry-fresh">
+      <section className="py-20 bg-logo-fresh">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Premium Services</h2>
@@ -174,9 +177,9 @@ const Index = () => {
 
           <div className="flex flex-wrap justify-center gap-6">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-center gap-3 bg-laundry-green-light px-6 py-3 rounded-full">
-                <feature.icon className="w-5 h-5 text-laundry-green" />
-                <span className="font-medium text-laundry-green">{feature.name}</span>
+              <div key={index} className="flex items-center gap-3 bg-logo-blue-light/20 px-6 py-3 rounded-full border border-logo-blue/30">
+                <feature.icon className="w-5 h-5 text-logo-blue" />
+                <span className="font-medium text-logo-blue">{feature.name}</span>
               </div>
             ))}
           </div>
@@ -198,7 +201,7 @@ const Index = () => {
                   <div className="w-20 h-20 bg-gradient-hero rounded-full flex items-center justify-center mx-auto shadow-soft">
                     <step.icon className="w-10 h-10 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-laundry-green rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-logo-accent rounded-full flex items-center justify-center text-white font-bold text-sm">
                     {step.number}
                   </div>
                 </div>
@@ -211,7 +214,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-laundry-fresh">
+      <section className="py-20 bg-logo-fresh">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Simple, Transparent Pricing</h2>
@@ -220,29 +223,29 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`relative ${plan.popular ? 'ring-2 ring-laundry-blue shadow-floating' : 'shadow-card'} border-0 bg-card`}>
+              <Card key={index} className={`relative ${plan.popular ? 'ring-2 ring-logo-blue shadow-floating' : 'shadow-card'} border-0 bg-card`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-laundry-blue text-white px-4 py-1">Most Popular</Badge>
+                    <Badge className="bg-logo-blue text-white px-4 py-1">Most Popular</Badge>
                   </div>
                 )}
                 <CardContent className="p-8 text-center">
                   <h3 className="text-xl font-semibold mb-2 text-foreground">{plan.name}</h3>
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-laundry-blue">{plan.price}</span>
+                    <span className="text-4xl font-bold text-logo-blue">{plan.price}</span>
                     <span className="text-muted-foreground ml-1">{plan.unit}</span>
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center justify-center gap-2 text-muted-foreground">
-                        <div className="w-2 h-2 bg-laundry-green rounded-full" />
+                        <div className="w-2 h-2 bg-logo-accent rounded-full" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <Button 
                     asChild 
-                    className={`w-full ${plan.popular ? 'bg-laundry-blue hover:bg-laundry-blue-dark' : ''}`}
+                    className={`w-full ${plan.popular ? 'bg-logo-blue hover:bg-logo-blue-dark' : ''}`}
                     variant={plan.popular ? 'default' : 'outline'}
                   >
                     <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
@@ -283,7 +286,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-laundry-fresh">
+      <section className="py-20 bg-logo-fresh">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Ready to Get Started?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -291,13 +294,13 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button asChild size="lg" className="bg-laundry-blue hover:bg-laundry-blue-dark text-lg px-8 py-6 shadow-soft">
+            <Button asChild size="lg" className="bg-logo-blue hover:bg-logo-blue-dark text-lg px-8 py-6 shadow-soft">
               <a href={`tel:${phoneNumber}`}>
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: {phoneNumber}
               </a>
             </Button>
-            <Button asChild size="lg" variant="secondary" className="bg-laundry-green hover:bg-laundry-green/90 text-white text-lg px-8 py-6 shadow-soft">
+            <Button asChild size="lg" variant="secondary" className="bg-logo-accent hover:bg-logo-accent/90 text-white text-lg px-8 py-6 shadow-soft">
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Chat on WhatsApp
@@ -309,15 +312,15 @@ const Index = () => {
             <h3 className="text-xl font-semibold mb-4 text-foreground">Visit Our Store</h3>
             <div className="space-y-3 text-muted-foreground">
               <div className="flex items-center justify-center gap-2">
-                <MapPin className="w-4 h-4 text-laundry-blue" />
+                <MapPin className="w-4 h-4 text-logo-blue" />
                 <span>123 Clean Street, Fresh City, FC 12345</span>
               </div>
               <div className="flex items-center justify-center gap-2">
-                <Clock className="w-4 h-4 text-laundry-blue" />
+                <Clock className="w-4 h-4 text-logo-blue" />
                 <span>Mon-Sat: 7AM-8PM, Sun: 9AM-6PM</span>
               </div>
               <div className="flex items-center justify-center gap-2">
-                <Mail className="w-4 h-4 text-laundry-blue" />
+                <Mail className="w-4 h-4 text-logo-blue" />
                 <span>hello@thelaundryBag.com</span>
               </div>
             </div>
@@ -330,15 +333,18 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-2">
-              <h3 className="text-2xl font-bold text-laundry-blue mb-4">The Laundry Bag</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <img src="/lovable-uploads/23bfce5b-23ca-478a-9252-ad0e924eecff.png" alt="LB Logo" className="h-8 w-8" />
+                <h3 className="text-2xl font-bold text-logo-blue">The Laundry Bag</h3>
+              </div>
               <p className="text-gray-300 mb-6 max-w-md">
                 Premium laundry services with eco-friendly care. We make your life easier with fresh, clean clothes delivered to your door.
               </p>
               <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 bg-laundry-blue rounded-full flex items-center justify-center hover:bg-laundry-blue-light transition-colors">
+                <a href="#" className="w-10 h-10 bg-logo-blue rounded-full flex items-center justify-center hover:bg-logo-blue-light transition-colors">
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-laundry-blue rounded-full flex items-center justify-center hover:bg-laundry-blue-light transition-colors">
+                <a href="#" className="w-10 h-10 bg-logo-blue rounded-full flex items-center justify-center hover:bg-logo-blue-light transition-colors">
                   <Instagram className="w-5 h-5" />
                 </a>
               </div>
@@ -384,7 +390,7 @@ const Index = () => {
         <Button 
           asChild 
           size="lg" 
-          className="rounded-full w-16 h-16 bg-laundry-green hover:bg-laundry-green/90 shadow-floating animate-pulse hover:animate-none"
+          className="rounded-full w-16 h-16 bg-logo-accent hover:bg-logo-accent/90 shadow-floating animate-pulse hover:animate-none"
         >
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
             <MessageCircle className="w-8 h-8" />
